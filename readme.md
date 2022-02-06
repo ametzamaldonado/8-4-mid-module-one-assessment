@@ -28,7 +28,8 @@ Please note that you should use the accumulator pattern for _all of these proble
 
 ### Data Structure
 
-Each function makes use of a `animals` array, that contains a number of objects. The entire array is included below.
+Each function makes use of a `animals` array, that contains a number of objects. 
+The entire array is included below.
 
 ```js
 const animals = [
