@@ -110,26 +110,26 @@ describe("filterByCountMinimum()", () => {
 });
 
 describe("getMostCommonAnimal()", () => {
-  test("should return the animal object that has the highest count", () => {
+  test.only("should return the animal object that has the highest count", () => {
     const actual = getMostCommonAnimal(animals);
     const expected = { kind: "Chicken", count: 11 };
     expect(actual).toEqual(expected);
   });
 
-  test("should return the first animal object that has the highest count if there are multiples", () => {
+  test.only("should return the first animal object that has the highest count if there are multiples", () => {
     const subarray = animals.slice(3);
     const actual = getMostCommonAnimal(subarray);
     const expected = { kind: "Dog", count: 2 };
     expect(actual).toEqual(expected);
   });
 
-  test("should return null if the input is empty", () => {
+  test.only("should return null if the input is empty", () => {
     const actual = getMostCommonAnimal([]);
     const expected = null;
     expect(actual).toEqual(expected);
   });
 
-  test("does not use the .sort() method", () => {
+  test.only("does not use the .sort() method", () => {
     const str = getMostCommonAnimal.toString();
     // Function should have student written code in it.
     expect(str.length).toBeGreaterThan(40);

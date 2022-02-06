@@ -56,6 +56,8 @@ function getTotalCount(animals) {
     return arr 
 };
 
+
+
 /**
  * FUNCTION DESCRIPTION
  * ------------------
@@ -75,19 +77,16 @@ function getTotalCount(animals) {
  * filterByCountMinimum([], 3); 
   //> [] // returns empty array if input array is empty
  */
-  function getMostCommonAnimal(animals) {
-    if (animals.length <1){
-      return null;
-    }
-    let highestSoFar = animals[0];
-      for (let i = 1; i < animals.length; i++){
-        if (animals[i].count > highestSoFar.count){
-          highestSoFar = animals[i];
-        }
+  function filterByCountMinimum(animals, minimum) {
+    let animalCount=[]
+    for (let i  =  0;  i  <  animals.length;  i++){
+      if (animals[i].count >=  minimum ){
+        animalCount.push(animals[i])
       }
-      return highestSoFar
-  }
-//Original submitted
+    }
+    return animalCount;
+}
+//Original answer before Submission
     // let animalCount=[]
     // for (let i = 0; i < animals.length; i++) {
     //     if (animals[i].count >=  minimum ){
@@ -96,6 +95,8 @@ function getTotalCount(animals) {
     // }
     // return animalCount
   // }
+
+
 
 /**
  * FUNCTION DESCRIPTION
@@ -109,19 +110,20 @@ function getTotalCount(animals) {
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-// Answered after test subbmission and worked on with Tim.
+//Worker on with Tim after Submission
 function getMostCommonAnimal(animals) {
-  if (animals.length < 1){
-    return null;
-  }
-  let highestSoFar = animals[0];
-    for (let i = 1; i < animals.length; i++){
-      if (animals[i].count > highestSoFar.count){
-        highestSoFar = animals[i];
-      }
+    if (animals.length < 1){
+      return null;
     }
-    return highestSoFar
-}
+    let highestSoFar = animals[0];
+      for (let i = 1; i < animals.length; i++){
+        if (animals[i].count > highestSoFar.count){
+          highestSoFar = animals[i];
+        }
+      }
+      return highestSoFar
+  }
+
 
 // Do not change anything below this line.
 module.exports = {
