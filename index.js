@@ -69,7 +69,8 @@ function getTotalCount(animals) {
  *
  * EXAMPLE
  * ------------------
- * filterByCountMinimum(animals, 5); //> [
+ * filterByCountMinimum(animals, 5); 
+ * //> [
     { kind: "Pig", count: 5 },
     { kind: "Cow", count: 7 },
     { kind: "Chicken", count: 11 },
@@ -78,14 +79,15 @@ function getTotalCount(animals) {
   //> [] // returns empty array if input array is empty
  */
   function filterByCountMinimum(animals, minimum) {
-    let animalMin=[]
+    let animalCount=[]
     for (let i = 0; i < animals.length; i++) {
         if (animals[i].count >=  minimum ){
-            animalMin ++
+            animalCount.push(animals[i].kind, animals[i].count)
         }
     }
-    return animalMin
+    return animalCount
   }
+
 
 
 /**
